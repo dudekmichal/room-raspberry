@@ -10,18 +10,17 @@ This is project for my own room. It includes Raspberry Pi 2B, speakers, lcd 16x2
   - Voice information about current time
   - Weather information from OWM (Open Weather Map) API
 
-> LCD dysplay shows the most important informations.
-> Panel controls playing music, alarm clocks
-> Each key on keyboard do something (e.g. shows temperature, song info)
-> Alarm clock gets random track from tracks named like alarm*.mp3 in ~/music
+> LCD dysplay shows the most important informations. Panel controls playing
+> music, alarm clocks. Each key on keyboard do something (e.g. shows
+> temperature, song info). Alarm clock gets random track from tracks named like alarm*.mp3 in ~/music
 
 
 ### Installation
 
-If you want to use this stuff you will need to change a few things:
-In file room-system.py set variable owm to pyowm.OWM('<your key>').
-In file checkmail.py set USERNAME to your e-mail address.
-In file checkmail.py set PASSWORD to your e-mail password.
+If you want to use this stuff you will need to change a few things:  
+In file room-system.py set variable owm to pyowm.OWM('<your key>').  
+In file checkmail.py set USERNAME to your e-mail address.  
+In file checkmail.py set PASSWORD to your e-mail password.  
 
 Then install all dependencies on your RPi:
 
