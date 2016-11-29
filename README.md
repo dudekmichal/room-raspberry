@@ -28,12 +28,13 @@ Then install all dependencies on your RPi:
 $ mkdir /home/pi/repo
 $ cd /home/pi/repo
 $ git clone https://github.com/qeni/room-raspberry
+# apt-get update
+# apt-get install python python3 python-feedparser mpd mpc cron mpg123 python-pip
 # pip install pyowm RPLCD
-# apt-get install python python3 python-feedparser mpd mpc cron mpg123
 # systemctl enable cron
 # systemctl start cron
-$ mkdir -o /home/pi/.config/mpd
-$ cp /home/pi/repo/room-raspberry/configs/mpd.conf /home/pi/config/mpd/mpd.conf
+$ mkdir -p /home/pi/.config/mpd
+$ cp /home/pi/repo/room-raspberry/configs/mpd.conf /home/pi/.config/mpd/mpd.conf
 $ echo "mpd ~/.config/mpd/mpd.conf" >> ~/.bashrc
 $ crontab -e
 Add line:
