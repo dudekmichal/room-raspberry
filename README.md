@@ -1,6 +1,6 @@
 # Raspberry Pi Room
 
-[![N|Solid](https://raw.github.com/qeni/room-raspberry/master/img/powered_by.png)
+![N|Solid](https://raw.github.com/qeni/room-raspberry/master/img/powered_by.png)
 
 This is project for my own room. It includes Raspberry Pi 2B, speakers, lcd 16x2 I2C display, control panel with keyboard.
 
