@@ -35,12 +35,12 @@ $ git clone https://github.com/qeni/room-raspberry
 # systemctl start cron
 $ mkdir -p /home/pi/.config/mpd
 $ cp /home/pi/repo/room-raspberry/configs/mpd.conf /home/pi/.config/mpd/mpd.conf
-$ echo "mpd ~/.config/mpd/mpd.conf" >> ~/.bashrc
 $ crontab -e
 Add line:
 0 * * * * /home/pi/repo/room-raspberry/scripts/readhour.sh;sleep 1; /home/pi/repo/room-raspberry/scripts/checkmail.py
 And lines for your alarm clocks.
 # reboot
+$ mpd ~/.config/mpd/mpd.conf
 ```
 
 ### Todos
