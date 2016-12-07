@@ -31,8 +31,9 @@ Then install all dependencies on your RPi:
 $ mkdir /home/pi/repo
 $ cd /home/pi/repo
 $ git clone https://github.com/qeni/room-raspberry
+# apt-get update
+# apt-get install python python3 python3-feedparser mpd mpc cron mpg123 python3-pip
 # pip3 install pyowm stravalib
-# apt-get install python python3 python-feedparser mpd mpc cron mpg123
 # systemctl enable cron
 # systemctl start cron
 $ mkdir -o /home/pi/.config/mpd
@@ -45,6 +46,7 @@ Add line:
 0 * * * * /home/pi/repo/room-raspberry/scripts/readhour.sh; /home/pi/repo/room-raspberry/scripts/checkmail.py
 And lines for your alarm clocks.
 # reboot
+$ mpd ~/.config/mpd/mpd.conf
 ```
 
 ### Todos
