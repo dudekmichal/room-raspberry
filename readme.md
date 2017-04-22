@@ -1,3 +1,4 @@
+![N|Solid](https://img.shields.io/badge/python-3.6-brightgreen.svg) ![N|Solid](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 # Raspberry Pi Room
 
 ![N|Solid](https://raw.github.com/qeni/room-raspberry/master/img/powered_by.png)
@@ -28,22 +29,9 @@ room-system.py:
 Then execute a few commands:
 
 ```
-$ mkdir /home/pi/repo
-$ cd /home/pi/repo
-$ git clone https://github.com/qeni/room-raspberry
-# apt-get update
-# apt-get install python python3 python3-feedparser mpd mpc cron mpg123 python3-pip
-# pip3 install pyowm stravalib
-# systemctl enable cron
-# systemctl start cron
-$ mkdir -o /home/pi/.config/mpd
-$ cp /home/pi/repo/room-raspberry/configs/mpd.conf /home/pi/.config/mpd/mpd.conf
-$ echo "/home/pi/repo/room-raspberry/scripts/init.sh" >> ~/.bashrc
-$ echo "sleep 3" >> ~/.bashrc
-$ echo "/home/pi/repo/room-raspberry/controller.py" >> ~/.bashrc
 $ crontab -e
 Add lines:
-0 8-21 * * * /home/pi/repo/room-raspberry/scripts/readhour.sh; /home/pi/repo/room-raspberry/scripts/checkmail.py
+0 8-21 * * * /home/pi/repo/room-raspberry/scripts/readhour.sh && /home/pi/repo/room-raspberry/scripts/checkmail.py
 0 7 * * 1-5 /home/pi/repo/room-raspberry/scripts/alarmclock.sh # Alarm on 7.00 each day
 * * * * * /home/pi/repo/room-raspberry/displayer.py
 
@@ -56,6 +44,4 @@ Add lines:
 
 ### License
 GNU GPL v3.0
-Just do what you wish.
-
-**Free Software, hell yeah**
+You can do what you wish.
